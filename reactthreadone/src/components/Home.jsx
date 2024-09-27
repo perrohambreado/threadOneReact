@@ -80,7 +80,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
           )}
         </div>
 
-        <img id="fondo" src={FondoHeader} alt="fondo" />
+        
       </header>
 
       <section className="pepino">
