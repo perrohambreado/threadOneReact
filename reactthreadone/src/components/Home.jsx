@@ -1,7 +1,19 @@
-// HomePage.jsx
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/home.css';
+import LogoThreadOne from '../images/LogoThreadOne.png';
+import FondoHeader from '../images/FondoHeader.jpg';
+import Playeras from '../images/CategoriaPlayeras.jpg';
+import Diseña from '../images/CategoriaPersonalizacion.jpg';
+import Stikers from '../images/CategoriaStickers.jpg';
+//Fotos carrusel
+import imagen1 from '../images/Carrusel/imagen1.jpg';
+import imagen2 from '../images/Carrusel/imagen2.jpg';
+import imagen3 from '../images/Carrusel/imagen3.jpg';
+import imagen4 from '../images/Carrusel/imagen4.jpg';
+import imagen5 from '../images/Carrusel/imagen5.jpg';
+import imagen6 from '../images/Carrusel/imagen6.jpg';
+import imagen7 from '../images/Carrusel/imagen7.jpg';
 
 const HomePage = ({ email_usuario, nombre_usuario }) => {
   return (
@@ -27,14 +39,14 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
 
         <title>ThreadOne</title>
         
-        <link rel="icon" href="/images/LogoThreadOne.png" />
+        <link rel="icon" href="" />
 
       </Helmet>
 
       <header style={{ justifyContent: 'space-between' }}>
         <div className="header-left">
           <a href="/" className="logo-button">
-            <img src="/images/LogoThreadOne.png" alt="Logo" className="logo" />
+            <img src={LogoThreadOne} alt="Logo" className="logo" />
           </a>
         </div>
 
@@ -57,20 +69,6 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
             </svg>
           </a>
 
-          <a href="/favoritos" className="cart-button">
-            <span id="favorites">Favoritos</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="16" 
-              height="16" 
-              fill="currentColor" 
-              className="bi bi-heart" 
-              viewBox="0 -1 16 16"
-            >
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-            </svg>
-          </a>
-
           {typeof email_usuario === 'undefined' ? (
             <a href="/usuario" className="account-button">
               <span id="greeting">Hey, tú</span>
@@ -82,7 +80,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
           )}
         </div>
 
-        <img id="fondo" src="/images/FondoHeader.jpg" alt="fondo" />
+        <img id="fondo" src={FondoHeader} alt="fondo" />
       </header>
 
       <section className="pepino">
@@ -94,7 +92,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
         <div className="cajita">
           <a href="/stickers" className="cajona">
             <div className="imgBx">
-              <img src="/images/CategoriaStickers.jpg" alt="Stickers" />
+              <img src={Stikers} alt="Stickers" />
             </div>
             <div className="content">
               <div>
@@ -105,7 +103,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
 
           <a href="/custom" className="cajona">
             <div className="imgBx">
-              <img src="/images/CategoriaPersonalizacion.jpg" alt="Personalización" />
+              <img src={Diseña} alt="Personalización" />
             </div>
             <div className="content">
               <div>
@@ -116,7 +114,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
 
           <a href="/camisetas" className="cajona">
             <div className="imgBx">
-              <img src="/images/CategoriaPlayeras.jpg" alt="Camisetas" />
+              <img src={Playeras} alt="Camisetas" />
             </div>
             <div className="content">
               <div>
@@ -146,43 +144,43 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
           <div id="image-track">
             <img 
               className="image" 
-              src="/images/homecarrousel/466448dba0c215118e8067191bd0dc6d.jpg" 
+              src={imagen1}
               alt="Image 1" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/62640a327d8c0e9d264b46a250a376ff.jpg" 
+              src={imagen2}
               alt="Image 2" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/466448dba0c215118e8067191bd0dc6d.jpg" 
+              src={imagen3}
               alt="Image 3" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/5556447bb2b8e79f1684c31d1f51015d.jpg" 
+              src={imagen4}
               alt="Image 4" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/b7214c69c8daa4bbd55a7ba53d03ce8c.jpg" 
+              src={imagen5}
               alt="Image 5" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/c11f118e6a7919891ab155a8fa8742ed.jpg" 
+              src={imagen6}
               alt="Image 6" 
               draggable="false" 
             />
             <img 
               className="image" 
-              src="/images/homecarrousel/cb63a2f3909951d69151ea4f2ac2bdc0.jpg" 
+              src={imagen7}
               alt="Image 7" 
               draggable="false" 
             />
