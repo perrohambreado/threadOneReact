@@ -7,13 +7,11 @@ import HomePage from './components/Home';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/registro" element={<Header />} />
-        <Route path="/login" element={<Header />} />
-      </Routes>
-    </Router>
+    <div className='Tode'>
+      <Header/>
+      <HomePage/>
+    </div>
+    
   );
 }
 

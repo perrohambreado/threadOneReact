@@ -132,48 +132,7 @@ const HomePage = ({ email_usuario, nombre_usuario }) => {
         <link rel="icon" href="" />
       </Helmet>
 
-      <header style={{ justifyContent: 'space-between' }}>
-        <div className="header-left">
-          <a href="/" className="logo-button">
-            <img src={LogoThreadOne} alt="Logo" className="logo" />
-          </a>
-        </div>
-
-        <div className="header-right">
-          <button 
-            className="language-btn" 
-            id="languageBtn" 
-            onClick={handleLanguageClick} 
-            ref={languageBtnRef}
-          >
-            <span className="material-symbols-outlined">translate</span>
-          </button>
-
-          <a href="/carrito" className="cart-button">
-            <span id="cart">{elementsToTranslate[language].cart}</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="16" 
-              height="16" 
-              fill="currentColor" 
-              className="bi bi-cart" 
-              viewBox="0 0 16 16"
-            >
-              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-            </svg>
-          </a>
-
-          {typeof email_usuario === 'undefined' ? (
-            <a href="/usuario" className="account-button">
-              <span id="greeting">{elementsToTranslate[language].greeting}</span>
-            </a>
-          ) : (
-            <a href="/usuario" className="account-button">
-              <span id="greeting">{`Hey, ${nombre_usuario}`}</span>
-            </a>
-          )}
-        </div>
-      </header>
+      {/* HEADER */}
 
       <section className="pepino">
         <h1 className="textt" id="threadOne">{elementsToTranslate[language].threadOne}</h1>
