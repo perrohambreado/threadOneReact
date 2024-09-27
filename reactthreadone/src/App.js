@@ -4,13 +4,18 @@ import './App.css';
 import logo from './logo.svg';
 import Header from './components/Header';
 import HomePage from './components/Home';
+import Registro from './components/Registro';
 
 function App() {
   return (
-    <div className='Tode'>
-      <Header/>
-      <HomePage/>
-    </div>
+    <Router>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/registro" element={<Registro />} />
+                </Routes>
+            
+        </Router>
     
   );
 }
