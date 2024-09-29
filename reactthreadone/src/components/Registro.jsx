@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import '../styles/Registro.css';
+import '../styles/registro.css';
 import logo from '../images/LogoThreadOne.png';
 import granadaImg from '../images/GranadaRegistro.png';
 
